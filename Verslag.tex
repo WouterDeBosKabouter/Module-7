@@ -1,0 +1,56 @@
+% !TeX spellcheck = en_GB
+\documentclass[11pt,a4paper,twoside,openright]{report} %,openright
+\usepackage{Verslag}
+\usepackage[english]{babel}
+
+%\title{Verslag titel}
+%\author{Groep 4}
+%\date{\today}
+
+\begin{document}
+
+%Cover + Title page
+%\includepdf[pages={1,{},2,{}}]{Cover.pdf}
+\setlength{\voffset}{-2cm} 
+
+
+\chapter*{Preface}
+\phantomsection \addcontentsline{toc}{chapter}{Preface}
+\setcounter{page}{1}
+\pagenumbering{roman}
+%\include{Voorwoord}
+
+
+\tableofcontents
+%\phantomsection \addcontentsline{toc}{chapter}{Table of Contents}
+
+\listoffigures
+\phantomsection\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoftables
+\phantomsection\addcontentsline{toc}{chapter}{List of Tables}
+
+%List of Symbols And Abbreviations
+%\include{ListOfSymbols}
+
+%\include{Samenvatting}
+
+%Main Content
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%\include{Introduction}
+
+%\include{Conclusion}
+
+%Appendix
+\cleardoublepage
+\setcounter{page}{1}
+\pagenumbering{Roman}
+\phantomsection\addcontentsline{toc}{part}{Appendix}
+\part*{Appendix}
+\appendix
+
+%Bibliograpy
+
+\end{document}
