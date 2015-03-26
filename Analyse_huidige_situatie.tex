@@ -32,7 +32,7 @@ Het bestaande systeem kan benaderd worden met een gedempt massa-veersysteem, De 
 \begin{equation}
 G(s) = K * \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}
 \end{equation}
-Met behulp van de overshoot en de peak-time die te bepalen zijn uit afbeelding \textbf{(Stapresponsie)} kunnen $\zeta$ en $\omega_n$ bepaalt worden.
+Met behulp van de overshoot en de peak-time die te bepalen zijn uit afbeelding \textbf{(Stapresponsie)} kunnen $\zeta$, $\omega_n$ en de versterking $K$ bepaalt worden.
 \begin{equation}
 \zeta = \frac{1}{\sqrt{1 + (\frac{\pi}{\ln(OS})^2}} \ \ \ with \ \ OS = \frac{x(t_p)}{x(\infty)} -1
 \end{equation}
@@ -43,10 +43,18 @@ Met behulp van de overshoot en de peak-time die te bepalen zijn uit afbeelding \
 K = \frac{x_{response}(\infty)}{x_{signal}(\infty)}
 \end{equation}
 De waarden voor $K$, $\zeta$ en $\omega_n$ zijn dus gelijk aan: $ K = 622$, 
-$\zeta = 0.223$ en $\omega_n = 89.5 \frac{rad}{s} = 14.2 \ Herz$.\\
-De overdrachtsfunctie van dit systeem wordt dus:
+$\zeta = 0.223$ en $\omega_n = 89.5 \frac{rad}{s} = 14.2 \ Hz$.\\
+De overdrachtsfunctie van dit systeem wordt dus gelijk aan:
 \begin{equation}
 G(s) = 622 * \frac{8013}{s^2 + 39.86 s + 8013}
 \end{equation}
+(plaatje) \\
+Als afbeeldingen (stapresponsie en overdrachtres) met elkaar vergeleken worden word bevestigd dat de berekende overdrachtsfunctie een goede benadering is van dit systeem. 
+
+\subsection{Mechanische constanten}
+
+\subsection{Eigenfrequenties}
+
+\subsection{Conclusies en aanbevelingen}
 
 \end{document}
