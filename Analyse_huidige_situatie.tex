@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
 \begin{document}
 
@@ -13,6 +14,12 @@ In dit hoofdstuk worden de mechanische aspecten en responsie van het oude mechan
 \subsection{Algemene informatie}
 (plaatje van opstelling met maten(SW)) \\
 Zoals hierboven te zien is, bestaat de huidige rechtgeleiding uit twee verschillende bladveren met maten respectievelijk (lxbxh) ,van \textbf{()} die samen ervoor zorgen dat de rechtgeleiding met een bepaalde slag kan bewegen. Verder valt gelijk op te merken dat door het gebruik van twee bladveren het systeem overbepaald is.
+
+Bij het gebruiken van twee bladveren treedt er shortening op, dit wil zeggen dat het blok bij een uitwijking niet op gelijke hoogte blijft zitten. Er zijn twee bladveren met een verschillende lengte dus voor elke bladveer is de shortening berekende aan de hand van,
+\begin{equation}
+y=\frac{-0.6x^2}{l}
+\end{equation}
+Als maximale uitwijking van het systeem is 7.5mm genomen, volgens figuur ... blijkt dat het shortening effect minimaal is, dus wordt gekozen voor verwaarlozing van het shortening effect. 
 
 \subsection{Systeemresponsie}
 Met behulp van een van de beschikbaar gestelde opstellingen (opstelling 12) is de stapresponsie \textbf{(afbeelding)} bepaald met behulp van een blokvormig signaal
@@ -52,6 +59,26 @@ G(s) = 622 * \frac{8013}{s^2 + 39.86 s + 8013}
 Als afbeeldingen (stapresponsie en overdrachtres) met elkaar vergeleken worden word bevestigd dat de berekende overdrachtsfunctie een goede benadering is van dit systeem. 
 
 \subsection{Mechanische constanten}
+
+De mechanische constanten die bepaald moeten worden zijn de massa van het systeem, de dempingsconstante en de veerconstante. Gegeven is de eigenfrequentie,\\ 
+
+\begin{equation}
+\omega_n=\sqrt{\frac{k_{eq}}{m}}, \ \ \ \omega_n=14.2Hz
+\label{Eigenfrequentie1}
+\end{equation}
+
+De veerconstante \ref{BDPP} kan uitgedrukt worden als,
+\begin{equation}
+k=\frac{Eht^3}{l^3}, \ \ \ k_{eq}=k_1+k_2
+\label{Veerstijfheid} 
+\end{equation} 
+Dit geeft $k_1=864$$N/m$, $k_2=256$$N/m$, invullen in \ref{Eigenfrequentie1} geeft een massa van 140g. Voor de bewegingsvergelijking moet de dempingsconstante \ref{•} berekend worden aan de hand van,
+\begin{equation}
+2\zeta\omega_n=\frac{d}{m}
+\end{equation} 
+Dit geeft een totale dempingscoefficient van 5.6$Ns/m$.\\
+
+
 
 \subsection{Eigenfrequenties}
 
