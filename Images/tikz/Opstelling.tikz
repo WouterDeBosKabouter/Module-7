@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+
+\coordinate (LensL) at (-0.2,0);
+\coordinate (LensR) at (0.2,0);
+\coordinate (Camera) at ($ (LensL) +(LensR) + (-2,0) $);
+\node [rectangle, draw, text centered] (Object) at (3,0) {Object};
+
+%Lenzen
+\draw  (LensL) ellipse (.2 and 1);
+\draw  (LensR) ellipse (.2 and 2);
+
+%Camera
+\draw (Camera) -- ($ (Camera) + (0,.5) $)  -|  ($ (Camera) + (-.3,1.5) $) -|  ($ (Camera) + (-.5,-1.5) $) -|  ($ (Camera) + (-.3,-.5) $)  -| cycle;
+
+%Boven As Coor
+\node (0cor) at ($ (LensL) +(LensR) +(0,3.5) $) {y=0};
+\node (b0) at ($ (0cor) + (Camera) $)  {-b0};
+\node (y0)  at ($ (0cor) + (1.5,0)$){y0};
+\node (y0+250) at ($ (y0) + (3,0)$) {y0+200};
+
+%Boven As Lijn
+\draw ($ (b0) - (0,1) $) -- (b0) -- (0cor) -- ($(0cor)- (0,.5) $) node (y1) [below] {y1}-- (0cor) -- (y0) -- ($(y0)-(0,1)$) -- (y0) -- (y0+250) -- ($(y0+250)-(0,1)$);
+
+%y2 lijn
+\node (y2) [below] at ($(0cor)- (0,.5) + (Object) $) {y2};
+
+\draw ($(y0) - (0cor) + (y1)$)-- (y2) -- ($(y2) - (0,.3)$);
+
+
+%Voorwerp
+\draw ($(y1)+(-0.8,-0.3)$) |- (y1) -| ($(y1)+(0.8,-0.3)$);
+\end{tikzpicture}
