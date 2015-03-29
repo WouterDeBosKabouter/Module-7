@@ -15,7 +15,17 @@ In dit hoofdstuk worden de mechanische aspecten en responsie van het oude mechan
 
 \subsection{Algemene informatie}
 (plaatje van opstelling met maten(SW)) \\
-Zoals hierboven te zien is, bestaat de huidige rechtgeleiding uit twee verschillende bladveren met maten respectievelijk (lxbxh) ,van \textbf{()} die samen ervoor zorgen dat de rechtgeleiding met een bepaalde slag kan bewegen. Verder valt gelijk op te merken dat door het gebruik van twee bladveren het systeem overbepaald is.
+Zoals hierboven te zien is, bestaat de huidige rechtgeleiding uit twee verschillende bladveren met maten respectievelijk 38x3x0.30 en 58.70x5x0.30mm ,van staal die samen ervoor zorgen dat de rechtgeleiding met een bepaalde slag kan bewegen. Verder valt gelijk op te merken dat door het gebruik van twee bladveren het systeem overbepaald is. Bij het analyseren van het systeem wordt duidelijk dat er 1  translerende vrijheidsgraad is in de x-richting. Twee bladveren zorgen voor 3x2$=$6 vastgelegde vrijheidsgraden, dus 5-1=1 overbepaaldheid. 
+
+\begin{figure}[h]
+\label{Overbepaaldheid}
+\centering
+\setlength\figureheight{5cm}
+\setlength\figurewidth{0.9\textwidth}
+\includegraphics[width=0.5\textwidth]{Overbepaaldheid.png}
+\caption{Oude systeem met 1 overbepaaldheid}
+\end{figure}
+
 
 Bij het gebruiken van twee bladveren treedt er shortening op, dit wil zeggen dat het blok bij een uitwijking niet op gelijke hoogte blijft zitten. Er zijn twee bladveren met een verschillende lengte dus voor elke bladveer is de shortening berekende aan de hand van,
 \begin{equation}
@@ -31,8 +41,9 @@ Als maximale uitwijking van het systeem is 7.5mm genomen, volgens figuur \ref{Sh
 \caption{Daling Blokje door Shortening}
 \end{figure}
 
+\newpage
 \subsection{Systeemresponsie}
-Met behulp van een van de beschikbaar gestelde opstellingen (opstelling 12) is de stapresponsie \textbf{(afbeelding)} bepaald met behulp van een blokvormig signaal
+Met behulp van een van de beschikbaar gestelde opstellingen (opstelling 12) is de stapresponsie \ref{stapresponsie} bepaald met behulp van een blokvormig signaal
 \begin{figure}[h]
   \centering
     \includegraphics[width=0.55\textwidth]{Inputsignaal.png}
@@ -40,12 +51,20 @@ Met behulp van een van de beschikbaar gestelde opstellingen (opstelling 12) is d
 \end{figure}
 
 \begin{figure}[h]
+\label{stapresponsie}
   \centering
     \includegraphics[width=0.95\textwidth]{Opstelling_12_stapresponsie.png}
     \caption{Representatieve stapresponsie met data-markers}
 \end{figure}
 
-Het bestaande systeem kan benaderd worden met een gedempt massa-veersysteem, De responsie van dit systeem kan vervolgens gemodeleerd worden met een tweede orde overdrachtsfunctie. 
+\begin{figure}[h]
+\label{overdrachtres}
+  \centering
+   \includegraphics[width=0.95\textwidth]{overdrach_stap.png}
+    \caption{Stapresponsie van vastgestelde overdrachtsfunctie}
+\end{figure}
+
+Het bestaande systeem kan benaderd worden met een gedempt massa-veersysteem, De responsie van dit systeem kan vervolgens gemodelleerd worden met een tweede orde overdrachtsfunctie. 
 \begin{equation}
 G(s) = K * \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}
 \end{equation}
@@ -65,8 +84,8 @@ De overdrachtsfunctie van dit systeem wordt dus gelijk aan:
 \begin{equation}
 G(s) = 622 * \frac{8013}{s^2 + 39.86 s + 8013}
 \end{equation}
-(plaatje) \\
-Als afbeeldingen (stapresponsie en overdrachtres) met elkaar vergeleken worden word bevestigd dat de berekende overdrachtsfunctie een goede benadering is van dit systeem. 
+
+Als afbeeldingen \ref{stapresponsie} en \ref{overdrachtres} met elkaar vergeleken worden word bevestigd dat de berekende overdrachtsfunctie een goede benadering is van dit systeem. 
 
 \subsection{Mechanische constanten}
 
@@ -82,16 +101,16 @@ De veerconstante \ref{BDPP} kan uitgedrukt worden als,
 k=\frac{Eht^3}{l^3}, \ \ \ k_{eq}=k_1+k_2
 \label{Veerstijfheid} 
 \end{equation} 
-Dit geeft $k_1=864$$N/m$, $k_2=256$$N/m$, invullen in \ref{Eigenfrequentie1} geeft een massa van 140g. Voor de bewegingsvergelijking moet de dempingsconstante \ref{•} berekend worden aan de hand van,
+Dit geeft $k_1=864$$N/m$, $k_2=256$$N/m$, invullen in \ref{Eigenfrequentie1} geeft een massa van 140g. Voor de bewegingsvergelijking moet de dempingsconstante \ref{Systeemanalyse dictaat} berekend worden aan de hand van,
 \begin{equation}
 2\zeta\omega_n=\frac{d}{m}
 \end{equation} 
-Dit geeft een totale dempingscoefficient van 5.6$Ns/m$.\\
+Dit geeft een totale dempingscoëfficiënt van 5.6$Ns/m$.\\
 
+\newpage
 \subsection{Eigenfrequenties}
-Een van de belangrijkere systeemeigenschappen zijn de eigenfrequenties van het systeem. Het is wenselijk om de 1ste eigenfrequentie (van de ontworpen beweging) zo laag mogelijk te maken, terwijl de hogere eigenfrequenties zo hoog mogelijk gemaakt worden om ongewenste bewegingen te onderdrukken. Het huidige systeem is in Spacar gemodeleerd, en in figuren ()etc zijn de berekende eigenfrequenties te zien. Te zien valt dat de eerste eigenfrequentie overeenkomt met de eerder berekende, terwijl de hogere eigenfrequentie 130 resp 245 Herz zijn.
+Een van de belangrijkere systeemeigenschappen zijn de eigenfrequenties van het systeem. Het is wenselijk om de eerste eigenfrequentie (van de ontworpen beweging) zo laag mogelijk te maken, terwijl de hogere eigenfrequenties zo hoog mogelijk gemaakt worden om ongewenste bewegingen te onderdrukken. Het huidige systeem is in SPACAR gemodelleerd, in figuren \ref{•} zijn de berekende eigenfrequenties te zien. Te zien valt dat de eerste eigenfrequentie overeenkomt met de eerder berekende, terwijl de hogere eigenfrequentie 130 respectievelijk 245 Hertz zijn.
 \subsection{Conclusies en aanbevelingen}
-Een van de nadelen van het oude systeem is dat door het gebruik van twee bladveren het systeem overbepaald is wat zorgt voor ongewenste spanningen in de veren. \\ Tijdens experimenten zijn twee problemen duidelijk geworden, namelijk dat het systeem redelijk gevoelig is voor lompe studenten, waardoor de bladveren schuin komen te zitten, en het systeem klemt. Maar ook dat het systeem zeer gevoelig is invloeden van buitenaf (dit viel te zien in pieken als de opstellingstafel werd geraakt).  \\
-
+Een van de nadelen van het oude systeem is dat door het gebruik van twee bladveren het systeem overbepaald is wat zorgt voor ongewenste spanningen in de veren. \\ Tijdens experimenten zijn twee problemen duidelijk geworden, namelijk dat het systeem redelijk gevoelig is voor lompe studenten en voor invloeden van buiten af. Het eerste is te verklaren doordat de bladveren met twee bouten aan de opstelling geklemd zijn. Door met handen aan de opstelling te zitten kan na lang bewegen de bladveer verschuiven waardoor het systeem gaat klemmen. Voor de invloeden van buitenaf blijkt de opstelling zeer gevoelig te zijn voor het slaan op de tafel wat resulteert in extra pieken in het signaal. 
 
 \end{document}
