@@ -109,3 +109,6 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+# tikz temporary files
+*.preview*

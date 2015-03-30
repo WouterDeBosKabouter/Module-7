@@ -1,0 +1,59 @@
+\section{Beweging van de lens}
+Zodat de camera tijdens de volledige beweging van het mechanisme een scherp beeld heeft van het opgeraapte voorwerp moet de lens gedurende de hele slag op de juiste positie zijn. Dit zorg er voor dat het beeldpunt van de lens op de zelfde plek blijft. 
+\begin{figure}%[h]
+\centering
+\includegraphics{/tikz/Opstelling.tikz}
+\caption{Dimensies Opstelling}
+\label{fig:Opstelling}
+\end{figure}
+
+De positie van de lens wordt met de lenzen formule bepaald, als functie van de positie van het object~(\ref{equ:y1(y2)}). Door deze funcite te differentieeren is de snelheid van de lens uit te drukken in de positie en snelheid van het object~(\ref{equ:v1(v2,y2)}). 
+
+\begin{align*}
+\frac{1}{f}&=\frac{1}{b}+\frac{1}{v}	&	b&=b_{0}+y_{1} \\
+\frac{1}{f}&= \frac{1}{b_{0}+y_{1}}+\frac{1}{y_{2}+y_{0}-y_{1}} 	&	v&=y_{2}+y_{0}-y_{1}
+\end{align*}
+\begin{align}
+y_1(t)&=\frac{1}{2}
+\left( y_{1}-{b_0} + y_{2}(t) -\sqrt{y_0+b_0+y_2(t)}\sqrt{y_0+b_0-4f+y_2(t)} \right) \label{equ:y1(y2)}\\
+\frac{\partial y_1(t)}{\partial t}&=
+\frac{1}{2} \left( \frac{\partial y_2(t)}{\partial t} -
+\frac{\partial y_2(t)}{\partial t}\frac{\sqrt{y_0+b_0-4f+y_2(t)}}{2\sqrt{y_0+b_0+y_2(t)}} -
+\frac{\partial y_2(t)}{\partial t}\frac{\sqrt{y_0+b_0+y_2(t)}}{2\sqrt{y_0+b_0-4f+y_2(t)}} \right) \label{equ:v1(v2,y2)}
+\end{align}
+
+\subsection{Graphische weergave}
+Door waardes in te vullen voor de begin lens afstand($b_0$), de minimale afstand afstand tussen de lens en het object ($y_0$), en de brandpuntsafstand ($f$) kunnen we de uitwijking van de lens plotten tegen de slag die het object maakt.
+
+\begin{figure}
+\centering
+	\setlength\figureheight{5cm} 
+	\setlength\figurewidth{.9\textwidth}
+\includegraphics[width=\textwidth]{tikz/SlagLensuitwijking.tikz}
+\caption[Lensuitwijking tegen de gemaakte slag]{Lensuitwijking tegen de gemaakte slag bij $b_0 = 30mm$; $y_0=60mm$; en $f=21,6mm$.}
+\label{fig:SlagLensuitwijking}
+\end{figure}
+
+Om de beweging van de lens verder te beschrijven moet er meer bekend zijn over hoe het object zijn pad vervolgt. Aangenomen is dat het object met een constante versnelling ($a$) een bepaalde maximale snelheid behaalt ($v_e$) en dan met een gelijke vertraging ($-a$) tot stilstand komt. Met deze gegevens wordt het snelheidsprofiel van zowel het object als de lens beschreven zoals weergeven in figuur~\ref{fig:Snelheidprofiel}.
+
+\begin{figure}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+	\setlength\figureheight{5cm} 
+	\setlength\figurewidth{.9\textwidth}
+	\includegraphics[width=\textwidth]{tikz/SlagV1V2.tikz}
+\end{subfigure}~
+\begin{subfigure}[b]{0.45\textwidth}
+	\setlength\figureheight{5cm} 
+	\setlength\figurewidth{.9\textwidth}
+	\includegraphics[width=\textwidth]{tikz/UitwijkingV1.tikz}
+\end{subfigure}
+\caption{Snelheidsprofiel van de lens en het voorwerp.}
+\label{fig:Snelheidprofiel}
+\end{figure}
+
+
+%Is het mogelijk een plot te krijgen van de snelheid van de lens tegen zijn positie? Data punten overlap of iets lelijks like that. 
+
+%Snelheids profiel kan hier ook bij maar ik weet niet in hoeverre dat nuttig is. Daarentegen je hebt wel zoiets nodig wil je weergeven hoe hard de lens beweegt
+
